@@ -41,3 +41,19 @@ function towerBuilder(n) {
 
 //   console.log(towerBuilder(11))
 
+
+// for in loop find the duplicate elements
+function duplicateCount(text){
+    //...
+    const arrUpperTest = text.toUpperCase().split("");
+    let counter = {};
+    
+    arrUpperTest.forEach(el=> counter[el]=1+(counter[el]||0))
+    
+    let output = 0
+    for(const key in counter ){
+      if (counter[key]>1){output++}
+    }
+    return output                     
+      
+  }
